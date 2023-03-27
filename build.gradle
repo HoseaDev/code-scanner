@@ -1,5 +1,4 @@
 buildscript {
-
     repositories {
 
         google()
@@ -24,15 +23,8 @@ allprojects {
 }
 
 apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
 
-ext {
-    libraryVersion = '2.3.2'
-    publishedGroupId = 'com.budiyev.android'
-}
 
-group = publishedGroupId
-version = libraryVersion
 
 android {
     compileSdkVersion 32
@@ -42,7 +34,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 32
         versionCode 63
-        versionName libraryVersion
+        versionName "1.0.0"
     }
 
     compileOptions {
@@ -83,17 +75,4 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 artifacts {
     archives sourcesJar
     archives javadocJar
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                artifactId = 'code-scanner'
-                groupId = publishedGroupId
-                version = libraryVersion
-            }
-        }
-    }
 }

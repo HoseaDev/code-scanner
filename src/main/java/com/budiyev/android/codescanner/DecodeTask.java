@@ -30,7 +30,7 @@ import com.google.zxing.PlanarYUVLuminanceSource;
 import com.google.zxing.ReaderException;
 import com.google.zxing.Result;
 
-final class DecodeTask {
+public final class DecodeTask {
 
     private final byte[] mImage;
     private final Point mImageSize;

@@ -25,7 +25,7 @@ package com.budiyev.android.codescanner;
 
 import androidx.annotation.NonNull;
 
-final class Point {
+public final class Point {
 
     private final int mX;
     private final int mY;

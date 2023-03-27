@@ -38,7 +38,7 @@ import com.google.zxing.ReaderException;
 import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
 
-final class Utils {
+public final class Utils {
 
     private static final Comparator<Size> CAMERA_SIZE_COMPARATOR = new CameraSizeComparator();
 

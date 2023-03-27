@@ -27,7 +27,7 @@ import android.hardware.Camera;
 
 import androidx.annotation.NonNull;
 
-final class DecoderWrapper {
+public final class DecoderWrapper {
 
     private final Camera mCamera;
     private final Camera.CameraInfo mCameraInfo;
