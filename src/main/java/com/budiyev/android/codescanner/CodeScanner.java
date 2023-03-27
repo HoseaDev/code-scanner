@@ -760,6 +760,7 @@ public final class CodeScanner {
                     decoderWrapper.getPreviewSize(), decoderWrapper.getViewSize(), frameRect,
                     decoderWrapper.getDisplayOrientation(),
                     decoderWrapper.shouldReverseHorizontal()));
+
         }
     }
     public DecoderWrapper getDecoderWrapper(){
