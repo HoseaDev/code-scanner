@@ -130,7 +130,7 @@ public final class CodeScanner {
     private int mViewWidth = 0;
     private int mViewHeight = 0;
 
-    private byte[]  currentImg ;
+    private byte[]  mCurrentData ;
 
     /**
      * CodeScanner, associated with the first back-facing camera on the device
@@ -743,7 +743,7 @@ public final class CodeScanner {
                     data == null) {
                 return;
             }
-            currentImg = data;
+            mCurrentData = data;
             final DecoderWrapper decoderWrapper = mDecoderWrapper;
             if (decoderWrapper == null) {
                 return;
@@ -763,6 +763,11 @@ public final class CodeScanner {
 
         }
     }
+
+    public byte[] getmCurrentData() {
+        return mCurrentData;
+    }
+
     public DecoderWrapper getDecoderWrapper(){
       return   mDecoderWrapper;
     }
