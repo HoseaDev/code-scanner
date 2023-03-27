@@ -971,17 +971,17 @@ public final class CodeScannerView extends ViewGroup {
     }
 
     @NonNull
-    SurfaceView getPreviewView() {
+    public  SurfaceView getPreviewView() {
         return mPreviewView;
     }
 
     @NonNull
-    ViewFinderView getViewFinderView() {
+    public ViewFinderView getViewFinderView() {
         return mViewFinderView;
     }
 
     @Nullable
-    Rect getFrameRect() {
+   public Rect getFrameRect() {
         return mViewFinderView.getFrameRect();
     }
 
@@ -994,7 +994,7 @@ public final class CodeScannerView extends ViewGroup {
         mSizeListener = sizeListener;
     }
 
-    void setCodeScanner(@NonNull final CodeScanner codeScanner) {
+    public void setCodeScanner(@NonNull final CodeScanner codeScanner) {
         if (mCodeScanner != null) {
             throw new IllegalStateException("Code scanner has already been set");
         }

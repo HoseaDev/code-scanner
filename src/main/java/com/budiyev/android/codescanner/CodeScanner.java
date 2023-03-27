@@ -130,6 +130,8 @@ public final class CodeScanner {
     private int mViewWidth = 0;
     private int mViewHeight = 0;
 
+    private byte[]  currentImg ;
+
     /**
      * CodeScanner, associated with the first back-facing camera on the device
      *
@@ -741,6 +743,7 @@ public final class CodeScanner {
                     data == null) {
                 return;
             }
+            currentImg = data;
             final DecoderWrapper decoderWrapper = mDecoderWrapper;
             if (decoderWrapper == null) {
                 return;
@@ -758,6 +761,9 @@ public final class CodeScanner {
                     decoderWrapper.getDisplayOrientation(),
                     decoderWrapper.shouldReverseHorizontal()));
         }
+    }
+    public DecoderWrapper getDecoderWrapper(){
+      return   mDecoderWrapper;
     }
 
     private final class SurfaceCallback implements SurfaceHolder.Callback {
