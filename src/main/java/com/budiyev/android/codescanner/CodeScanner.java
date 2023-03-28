@@ -739,11 +739,12 @@ public final class CodeScanner {
     private final class PreviewCallback implements Camera.PreviewCallback {
         @Override
         public void onPreviewFrame(final byte[] data, final Camera camera) {
+            mCurrentData = data;
             if (!mInitialized || mStoppingPreview || mScanMode == ScanMode.PREVIEW ||
                     data == null) {
                 return;
             }
-            mCurrentData = data;
+
             final DecoderWrapper decoderWrapper = mDecoderWrapper;
             if (decoderWrapper == null) {
                 return;
